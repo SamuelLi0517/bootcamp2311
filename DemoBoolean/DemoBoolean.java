@@ -1,4 +1,4 @@
-package DemoBoolean.java;
+package DemoBoolean;
 
 public class DemoBoolean {
   public static void main(String[] args) {

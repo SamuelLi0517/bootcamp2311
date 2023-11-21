@@ -1,4 +1,4 @@
-package DemoString.java
+package DemoString;
 
 
 public class DemoString {
@@ -17,10 +17,24 @@ public static void main(String[] args){
   // Always look at the code inside the bracket first
   // step 1: "hello" + " " + "world" -> "hello world"
   // step 2: System.out.println() -> Print out
-  System.out.println("hello" + " " + "world")
+  System.out.println("hello" + " " + "world");
+
+
+  String strl = "hello";
+  System.out.println(strl); // "hello"
+  System.out.println(strl.length()); // 5
+  strl = strl + "world";
+  System.out.println(strl.length()); // 10
+
+  strl += "!!!";
+  System.out.println(strl.length()); // 13
+
+  // NO "-","*","/", in String
+  // String supports "+", "+="
+  
     
 
   
-  );
+  
 }  
 }
