@@ -32,9 +32,56 @@ public static void main(String[] args){
   // NO "-","*","/", in String
   // String supports "+", "+="
   
-    
+    // if, =, ==
+    int x = 0; // = means assignment
+    int x2 = 3; // = means assignment
+    if (x == x2) { // == means, asking if they are eqals
+      // "x == 2" return false, so the flow will nmot fall into this block
+      // do something
+      System.out.println("x is equals to x2");
+    } else {
+      System.out.println("x is equals to x2");
+      // sysout is the shortcut for System.out.println()
+    }
+
+    String s1 = "hello";
+    String s2 = "hello";
+    if (s1.equals(s2)) {// comparing two string variables
+    System.out.println("s1 is equals to s2");
+
+    if ("hello".equals(s1)){// comparing string value to a string variable
+    //if (s1.equals("hello")) // don't code in this way
+  System.out.println("s1 is hello");
+  }
+if ("hello".equals("hello")){ //aways true
+System.out.println("ABC");
+}
+
+//charAt()
+// 4 is an index of String.
+// Example: "hello", h -> index =0
+// e -> index = 1
+// l -> index = 2
+// l -> index = 3
+// o -> index = 4
+// s1.charAt(4) return 'o'
+char c = s1.charAt(4); 
+System.out.println(c);//o
+
+s1 = "samuel";
+// what if we always get the last character of the String
+// lenth() charAt()
+int lastCharIndex = s1.length() - 1;
+char lastChar = s1.charAt(lastCharIndex);
+// Approach 2
+lastChar = s1.charAt(s1.length() - 1);
+System.out.println("lastChar");
+
+
+    }
+    }
 
   
   
 }  
-}
+

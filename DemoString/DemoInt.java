@@ -1,4 +1,4 @@
-package DemoPrimitives;
+package DemoString;
 public class DemoInt{
 
   public static void main(String[] args){

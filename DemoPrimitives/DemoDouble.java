@@ -1,9 +1,9 @@
-package demoPrimitives.DemoDouble.java;
+package DemoPrimitives;
 
 public class DemoDouble {
   public static void main(String[] args) {
 
-    doubleb d1 = 0.3;
+    double d1 = 0.3;
     double d2 = 0.2;
     double d3 = d1 + d2;
     System.out.println(d3); // 0.5
