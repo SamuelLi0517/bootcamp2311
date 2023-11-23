@@ -182,6 +182,17 @@ if (itemTotal <= 3000){
 totalAmout = itemTotal +transportationfee;
 System.out.println("Total Amount=" + totalAmout);
 
+String str = "www.apple.com";
+if (str.length() < 10 || "www.apple.com".equals((str))) {
+System.out.println("lengh <10 or www.apple.com");
+}
+
+String s = ""; // empty string, lengh = 0
+System.out.println(s.length()); // 0
+s += "hello";
+if (!s.isEmpty()) {
+  System.out.println(" si is NOT empty");
+}
 
 }
 
