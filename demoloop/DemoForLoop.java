@@ -102,8 +102,6 @@ if(i % 2 == 0){
 // For even number, the following code will skipped
 sum += i;
 
-
-
   }
 System.out.println("sum" + sum);
 
@@ -131,7 +129,7 @@ System.out.println("i=" + i);// i = 0, i = 1
 int sum4 = 0;
 int finalsum = 0;
 for(int i = 0; i < 101; i++){
-  if(i % 2 ==0 ){
+  if(i % 2 == 0 ){
     continue;
   }
   sum4 += i;
@@ -141,10 +139,64 @@ for(int i = 0; i < 101; i++){
   }
 finalsum = sum4;
 }
-System.out.println("finalsum " + finalsum);
+System.out.println("finalsum = " + finalsum);
+
+
+// Question : determine whether year n is a leap year.
+/*
+ * Definition of a leap year:
+ * If a year is divisible by 4 and not divisible by 100 or divisible by 400,
+ * then, it is a lap year.
+ */
+//int year1 = 2009;
+// Program a condition to check if it is a leap year.
+// But should Not print anything.
+//if(){
+  //System.out.println("2009 is a leap year.");
+//}
+
+int year = 2009;
+//for(int year = 1999; year < 2050; year++){
+if(year % 400 ==0 || (year %4 == 0 && year % 100 != 0)){
+  System.out.println("year" + year + "is a leap year");
+} 
+else {System.out.println("year" + year + "is not a leap year");}
+
+
+
+
+
+//String searchMe = "peter piper picked a peck of pickled pepprs";
+
+// Example
+String str = "abc pol ijk def xyz";
+char target = 'f';
+int n = 0;
+boolean found = false;
+for(int i = 0; i < str.length(); i++){ // charAt(i) not use
+if(str.charAt(i) == target){
+ n = i + 1;
+  found = true;
+ break;
+}
+}
+if (found){ // found == true
+  System.out.println("Found" + target + "at the " + n + "the character");
+} else {
+System.out.println("Not found");
+
+}
+
+  }
 
 }
 
 
-  }
+
+
+
+
+
+
+  
 
