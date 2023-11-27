@@ -39,7 +39,30 @@ System.out.println(arr2.length); //5
 // array supports for loop
 
 
-boolean[] arr5 = new boolean[8];
+// default value of int[]
+int[] arr5 = new int[3];
+for (int i = 0; i < arr5.length; i++){
+  // arr5 is storing the arrdess of the array object
+  // we use arr[5] find out the 3 values stored in the array object
+  arr5[i] = i + 1;
+  System.out.println("arr5[i]=" + arr5[i]);
+  // [0] -> 1
+  // [0] -> 2
+  // [0] -> 3
+System.out.println("arr5[i]=" + arr5[i]);
+
+}
+for (int i= arr5.length - 1; i >= 0; i--){
+  //3 2 1
+System.out.print(arr5[i]); // "3 2 1"
+if (i > 0){
+  System.out.print(" ");
+}
+}
+
+String str = "hello"; // str is storing the address of String object hello
+String str2 = new String("hello");// str2 is storing the address of String object hello
+String str3 = String.valueOf("hello");
 
 
 
