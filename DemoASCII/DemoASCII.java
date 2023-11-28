@@ -24,7 +24,7 @@ String s6 = "abcA";
 
 System.out.println(s2.compareTo(s1));// 1 ('b' - 'a')
 System.out.println(s1.compareTo(s2));// -1 ('a' - 'b')
-System.out.println(s3.compareTo(s3));// -32 ('A' - 'a') 65-97
+System.out.println(s3.compareTo(s1));// -32 ('A' - 'a') 65-97
 System.out.println(s4.compareTo(s1));// 1, same 'a', then compare second character
 System.out.println(s5.compareTo(s1));// -2 same characters, will compare the
 System.out.println(s6.compareTo(s1));// -35 'A'- d 65 - 100
