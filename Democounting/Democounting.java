@@ -5,8 +5,8 @@ public class Democounting {
 
     // Assume all numbers are positive
     int[] numbers = new int[]{10, 2, 200, 2000, 2, 2};
-    int max = Integer.MIN_VALUE;
-    int min = Integer.MAX_VALUE;
+    int max = Integer.MAX_VALUE;
+    int min = Integer.MIN_VALUE;
     for (int i = 0; i < numbers.length; i++){
       if (numbers[i] > max){
         max = numbers[i];
