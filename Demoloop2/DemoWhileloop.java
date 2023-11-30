@@ -53,7 +53,7 @@ public class DemoWhileloop {
 
     //  firstNumber = thirdNumber;
     }
-    System.out.println("TEST" + Arrays.toString(arr));
+    System.out.println(Arrays.toString(arr));
 
     // Approach 2;
     // a2 = 0;
