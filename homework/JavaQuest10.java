@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Input a Index Position: 3
  * Input a new Value: 120
  * Original Array : [25, 14, 56, 15, 36, 56, 77, 18, 29, 49]
- * New Array: [25, 14, 56, 120, 15, 36, 56, 77, 18, 29]
+ * New Array:     [25, 14, 56, 120, 15, 36, 56, 77, 18, 29]
  */
 // Insert an elements into a specific position of the array
 // The original last element should be removed accordingly
@@ -29,16 +29,13 @@ public class JavaQuest10 {
 
     // code here
     int temp =0;
-  
-    my_array[my_array.length - 1] = newValue;
-   for( int i = 0; i < my_array.length -1; i++){
-    if (my_array[i+3] < my_array[i+4]) {
-      temp = my_array[i+3];
-      my_array[i+3] = my_array[i+4];
-      my_array[i+4] = temp;
+  my_array[my_array.length -1] = newValue;
+   for( int i = my_array.length -1 ; i < indexPosition ; i--){
+      temp = my_array[i - 1];
+      my_array[i - 1] = my_array[i];
+      my_array[i] = temp;
    }
 
     System.out.println("New Array: " + Arrays.toString(my_array));
   }
-}
 }
