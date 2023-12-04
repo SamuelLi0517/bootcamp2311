@@ -34,7 +34,7 @@ public class DemoInarray3 {
         arr2[i + 1] = temp1;
 
         // System.out.println(Arrays.toString(arr2));
-      }
+        
     }
     System.out.println(Arrays.toString(arr2));
     // Another code
@@ -129,4 +129,4 @@ System.out.println(str4.replace("ab", "ij"));// ijcijcijcijcijc
   }
 }
 
-
+}

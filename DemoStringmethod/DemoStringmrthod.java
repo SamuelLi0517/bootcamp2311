@@ -100,7 +100,7 @@ System.out.println(result);// ABABCAABCDEF
 String result2 = result.substring(3, 5); // BC
 System.out.println(result2);
 String result3 = s5.toUpperCase().substring(3, 5);
-System.out.println(result3);
+System.out.println("result3= " + result3);
 //Test
 String result4 = s5.toLowerCase();
 System.out.println(result4);

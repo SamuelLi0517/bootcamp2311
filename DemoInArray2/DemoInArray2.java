@@ -34,7 +34,7 @@ System.out.println("min=" + min);
 
 // second max value //10,8,6,4,2
 
-int secondMax = Integer.MIN_VALUE;
+int secondMax = Integer.MAX_VALUE;
 max = Integer.MIN_VALUE;
 for(int i = 0; i < arr.length; i++){
 if (arr[i] > max){

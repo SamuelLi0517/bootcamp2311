@@ -19,13 +19,15 @@ public double getRadius(){
 public void setRadius(double radius){
   this.radius = radius;
 }
+// Instance methods
 public double diameter(){
-  
+  return this.radius *2;
 
 }
 public double area(){
-
-
+//return this.radius * this.radius * 3.14;
+// Math library
+return Math.pow(this.radius, 2) * Math.PI;
 }
 
 
@@ -38,7 +40,13 @@ System.out.println(circle.getRadius());
 Circle circle2 = new Circle(3.4d);
 System.out.println(circle2.getRadius());// 3.4
 
+double diameter1 = circle.diameter();
+double area1 = circle.area();
+System.out.println("Circle 1 diameter=" + diameter1);
+System.err.println("Circle 1 area=" + area1);
 
+// Pass by reference
+circle = circle2;
 
 }
 

@@ -61,7 +61,7 @@ public static int sum(int x, int y) {
     return sum;
   }
 public static double sum(double x, double y, double z) {
-    double sum = x + y +  z;
+    double sum = x + y + z;
     return sum;
   }
   // Method Signature: sum(int x, int y, char z)
