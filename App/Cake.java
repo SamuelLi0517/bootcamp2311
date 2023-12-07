@@ -2,40 +2,49 @@ package App;
 
 public class Cake {
 
-  private int number;
+  private int cakeNumber;
 
-  private String name;
+  private String cakeName;
 
   private String taste;
+
+  private String customerName;
+
+  private double price;
 
   public Cake(){
 
   }
-  public Cake(String name) {
-    this.name = name;
+  public Cake(String cakeName) {
+    this.cakeName = cakeName;
 
   }
-  public Cake(String name,int number,String taste) {
-    this.name = name;
-    this.number=number;
+  public Cake(String cakeName,int cakeNumber,String taste,String customerName,double price) {
+    this.cakeName = cakeName;
+    this.cakeNumber = cakeNumber;
     this.taste = taste;
+    this.customerName = customerName;
+    this.price = price;
   }
   
-  public void setName(String name) {
-    this.name = name;
+  public void setName(String cakeName) {
+    this.cakeName = cakeName;
   }
 
-  public void setNumber(int number) {
-    this.number = number;
+  public void setNumber(int cakeNumber) {
+    this.cakeNumber = cakeNumber;
   }
    public void setTaste(String taste) {
     this.taste = taste;
   }
+  public void setcustomerName(String customerName) {
+    this.customerName = customerName;
+  }
   public String getName() {
-    return this.name;
+    return this.cakeName;
   }
   public int getNumber() {
-    return this.number;
+    return this.cakeNumber;
   }
    public String getTaste() {
     return this.taste;

@@ -8,5 +8,7 @@ public class Demo {
 
 // Call person's constructor
     
+
+//Cat cat = new Cat(); // empty constructor
   }
 }

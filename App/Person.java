@@ -19,8 +19,9 @@ public class Person {
     this.firstName = firstName;
     this.lastName = "";
   }
-  // public Person(String lastName){
+  //public Person(String lastName, String firstName){
   // this.lastName = lastName;
+  // this.firstName = firstName
   // }
 
   public Person(int age) {
@@ -37,7 +38,15 @@ public class Person {
     this.lastName = lastName;
     this.age = age;
   }
-
+// Instance Method (Object method)
+  // 1. Belong to the object (Person p1 = new Person(); p1.swim();)
+  // 2. Able to control this intance variable by "this"
+  
+  // Ststic Method
+  // 1. Belongs to the class (ClassName.staticMethod() -> Person.swim(3))
+  // 2. Not able to read/write instance variable
+  // 3. the return value completely derived by the input parameters
+  
   // Instance Method (Object method)
   // Setter
   public void setfirstName(String x) {
@@ -93,6 +102,37 @@ public class Person {
   public int getAge() {
     return this.age;
   }
+public static void swimming(){
+  System.out.println("I'm swimming.");// cannot ues
+}
+
+
+
+
+public void swim() { // void method can be with "return" or without "return"
+  int a = 1;
+  if (a > 2)
+  return;
+  System.out.println("hello");
+}
+public int eat() {
+  int b = 10;
+  if (b < 12){
+    return 100;
+  }
+  return -1;
+}
+
+
+
+
+
+
+
+
+
+
+
 
   public static void main(String[] args) {
     Person p1 = new Person();
@@ -117,7 +157,23 @@ public class Person {
     System.out.println("p5 full name=" + p5.getSmallFullName());
     System.out.println("p5 full name=" + p5.getFullName());
 
+// Person p5 = new Person("chris", "chan");
+// "Chris chan"
+// substring
 
+
+
+
+
+    // Static vs Instance method
+    // call Instance Method
+    Person p6 = new Person("Jenny");
+    p.6.setlastName
+    p6.swim(); // hello
+
+
+    // call static method
+    Person.swimming();// I'm swimming
   }
 
 }
