@@ -1,4 +1,4 @@
-package Demointerface;
+package Demointerface.bank;
 
 public class AccountHolder {
   
@@ -10,4 +10,15 @@ public class AccountHolder {
     this.name = name;
     this.age = age;
   }
+
+@Override
+public String toString(){
+  return "AccountHolder("
+  +"name=" + this.name
+  +", age=" + this.age
+  + ")";
+}
+
+
+  
 }
