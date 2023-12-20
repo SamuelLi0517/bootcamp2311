@@ -22,7 +22,7 @@ public class JavaQuest25 {
     int count = 0;
 
 for(int i = 0; i < segments.length; i++){
-  if(!s.isEmpty()){
+  if(!s.isBlank()){
 count++;
   }
 }

@@ -57,6 +57,32 @@ strings2.add("ABC");
 strings2.remove(0);
 System.out.println(strings2);// []
 
+if(strings.contains("DDD")){
+  System.out.println("contains DDD");
+}
+
+if(!strings.isEmpty()){
+  strings.add("AAA");
+}
+
+//
+ArrayList<String>arrayList1 = new ArrayList<>(List.of("John", "Mary", "Peter"));
+List<String>arrayList2 = List.of("John", "Mary", "Peter");
+
+arrayList1.add("Sally");// ok
+arrayList2.remove("Mary");// ok
+arrayList1.set(1, "Jenny");
+System.out.println("arrayList1 = " + arrayList1);
+
+
+
+arrayList2.add("Jenny");// java.lang.UnsupportedOperationException
+arrayList2.add("Sally");// java.lang.UnsupportedOperationException
+
+// List<Book>
+
+List<String> ls = new ArrayList<>(100);// capacity (array length)
+System.out.println(ls.size());// size = 0 (how many elements)
 
 
   }

@@ -1,4 +1,4 @@
-package questions;
+package homework;
 /*
 * 
 * Question : You are given an integer array nums. 
