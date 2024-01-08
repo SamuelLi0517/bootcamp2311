@@ -5,10 +5,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class DemoOptional {
   
-  public static void main(String[] args) {
+  public static void main(String[] args, OptionalDouble maxBlance) {
 // String target = "";
 //     "target".equals(target); //true/false
 //     target.equals("target"); //NPE
@@ -60,6 +61,17 @@ Optional<Account> optaccount2 = accounts.stream() //
 Account acct2 = optaccount2.orElseGet(() ->new Account(99, 0.1d));
 
 Account acct3 = optaccount2.orElseThrow(() ->new NoSuchElementException());
+
+OptionalDouble maxBalance = accounts.stream() //
+.mapToDouble(e -> e.getBlance())//
+.max();
+
+double max = 0.0d;
+if (maxBalance.isPresent()){
+  max = maxBlance.getAsDouble();
+}
+
+max = maxBalance.orElse(-1.0d);
 
   }
 

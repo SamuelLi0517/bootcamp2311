@@ -1,10 +1,10 @@
 package Exercise;
 
 import java.io.Serializable;
-import java.io.Writer;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -45,19 +45,19 @@ The Most Expensive Book: Name=Book D, Price=449.9
 }
 // Implement Wrtier Class
 // Code here ...
-class Wrtier{
+class Writer{
 
-    private String name;
+    private String author;
 
     private List<Book> books;
 
-    public Wrtier(String name, List<Book> books){
-this.name = name;
+    public Writer(String author, List<Book> books){
+this.author = author;
 this.books = books;
     }
 
-    public String getName(){
-        return name;
+    public String getAuthor(){
+        return author;
     }
 
     public List<Book> getBooks(){
@@ -66,6 +66,21 @@ this.books = books;
 }
 // Implement a Comparator to compare the book price
 // Code here ...
+class BookPriceComparator implements Comparator<Book> {
+
+    @Override
+    
+    public int compare(Book book1, Book book2) {
+        return book1.getPrice() < book2.getPrice() ? -1:1;
+        // if (book1.getPrice() < book2.getPrice()) {
+        //     return -1;
+        // } else if (book1.getPrice() > book2.getPrice()) {
+        //     return 1;
+        // } else {
+        //     return 0;
+        // }
+    }
+}
 
 class Exercise36 {
     public static void main(String[] args) {
@@ -80,18 +95,27 @@ class Exercise36 {
         List<Writer> writers = Arrays.asList(w1, w2);
         // Print all Writers names
         // Code here ...
-writers.stream()//
-.
+        writers.forEach(writer -> System.out.println(writer.getAuthor()));
+
         // Use flatMap method to return all books written by our writers, storing in a List<Book>
         // Just return the Books!
         // Code here ...
 
+        List<Book> allBooks = writers.stream()
+        .flatMap(writer -> writer.getBooks().stream())
+        .collect(Collectors.toList());
+
         // Print out all books' Name and Price.
         // Code here
+allBooks.forEach(book -> System.out.println("Name: " + book.getName() + ", Price: " + book.getPrice()));
 
         // Create Comparator for stream max() method use, aims to find the most expensive book
         // Book maxPriceBook = ...
                 
+        Book maxPriceBook = books.stream() //
+                .max(new BookPriceComparator())//
+                .orElseThrow();
+
         // Print out the most expensive book
         System.out.println("Name:" + maxPriceBook.getName() + ", Price:" + maxPriceBook.getPrice());
     }

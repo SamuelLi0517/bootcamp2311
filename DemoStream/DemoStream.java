@@ -109,7 +109,7 @@ public class DemoStream {
         .map(e -> e.getSalary())//
         .mapToDouble(d -> d)// intermediate operation
         .sum();// terminate opereation
-    System.out.println(sumOfSalary);
+    System.out.println("sumOfSalary = " + sumOfSalary);
 
     long countOfStaff = staffs.stream()//
         .map(e -> {// intermediate operation
