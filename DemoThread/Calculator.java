@@ -85,7 +85,6 @@ for(int i = 0; i < 100_000; i++){
   for( int i = 0; i < 100_000; i++){
           if(i==1)
   System.out.println(" ---- ");
-
     calculator.decrease();
       if(i==95000)
   System.out.println(" - ");

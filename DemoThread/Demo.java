@@ -1,0 +1,24 @@
+package DemoThread;
+
+public class Demo {
+  
+  public synchronized void methodA(){
+    methodB();
+  }
+
+  public synchronized void methodB(){
+    methodA();
+  }
+
+public static void main(String[] args) {
+  Thread worker1 = new Thread(() -> new Demo().methodA());
+
+  Thread worker2 = new Thread(() -> new Demo().methodB());
+}
+
+
+
+
+
+
+}
